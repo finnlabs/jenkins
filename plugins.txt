@@ -1,0 +1,15 @@
+google-login:1.2.1
+credentials:1.24
+mailer:1.16
+matrix-auth:1.2
+matrix-project:1.6
+script-security:1.13
+junit:1.2
+ssh-credentials:1.11
+ssh-slaves:1.10
+windows-slaves:1.1
+git:2.4.0
+promoted-builds:2.23.1
+maven-plugin:2.0
+git-client:1.19.0
+scm-api:1.0
