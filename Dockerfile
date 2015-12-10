@@ -13,6 +13,11 @@ RUN apt-get update && \
 RUN apt-get update && \
 	apt-get install -y libmysqlclient-dev libpq-dev nodejs && \
 	apt-get clean
+
+# Node
+ENV NODE_VERSION="0.12.7"
+RUN curl https://nodejs.org/dist/v${NODE_VERSION}/node-v${NODE_VERSION}-linux-x64.tar.gz | tar xzf - -C /usr/local --strip-components=1
+
 # Make sure jenkins uses /var/lib/jenkins, not /var/jenkins_home
 RUN usermod -d /var/lib/jenkins jenkins
 VOLUME /var/lib/jenkins
