@@ -8,8 +8,11 @@ RUN usermod -aG docker jenkins
 # RVM
 RUN gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 RUN apt-get update && \
-	apt-get install -y expect patch bzip2 gawk g++ gcc make libc6-dev patch libreadline6-dev zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev sqlite3 autoconf libgdbm-dev libncurses5-dev automake libtool bison pkg-config libffi-dev && \
-	apt-get install -y libmysqlclient-dev libpq-dev nodejs xvfb chromium && \
+	apt-get install -y expect patch bzip2 gawk g++ gcc make libc6-dev patch \
+		libreadline6-dev zlib1g-dev libssl-dev libyaml-dev libsqlite3-dev \
+		sqlite3 autoconf libgdbm-dev libncurses5-dev automake libtool bison \
+		pkg-config libffi-dev libmysqlclient-dev libpq-dev nodejs xvfb \
+		build-essential libmagickwand-dev chromium && \
 	apt-get clean
 
 # Node
